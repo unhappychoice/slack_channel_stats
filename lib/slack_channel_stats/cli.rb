@@ -11,8 +11,8 @@ module SlackChannelStats
       def initialize(channel_name:, user_name:, latest: nil, oldest: nil)
         @channel_name = channel_name
         @user_name = user_name
-        @latest = latest || Time.now.to_i - 60 * 60 * 24 * 365
-        @oldest = oldest || @latest - 60 * 60 * 24 * 30
+        @latest = latest || Time.now.to_i
+        @oldest = oldest || @latest - 60 * 60 * 24 * 365
         @client = Slack::Web::Client.new
         @container = Container.new(@user_name)
       end
