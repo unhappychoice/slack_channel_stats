@@ -4,7 +4,7 @@ PATH
     slack_channel_stats (0.0.1)
       pastel (~> 0.7.2)
       slack-ruby-client
-      thor (~> 0.20.0)
+      thor (>= 0.20, < 1.6)
       tty-box (>= 0.4.1, < 0.8.0)
       tty-color (~> 0.5)
       tty-command (~> 0.9.0)
@@ -229,7 +229,7 @@ GEM
       unicode-display_width (~> 1.5)
       unicode_utils (~> 1.4)
     strings-ansi (0.2.0)
-    thor (0.20.3)
+    thor (1.2.2)
     timers (4.3.5)
     traces (0.11.1)
     tty-box (0.5.0)
