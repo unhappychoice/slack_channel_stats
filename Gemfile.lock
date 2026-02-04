@@ -215,7 +215,7 @@ GEM
       tty-cursor (~> 0.7)
       tty-screen (~> 0.7)
       wisper (~> 2.0.0)
-    tty-screen (0.8.1)
+    tty-screen (0.8.2)
     tty-spinner (0.9.3)
       tty-cursor (~> 0.7)
     tty-table (0.11.0)
