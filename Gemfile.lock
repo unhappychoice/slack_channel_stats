@@ -82,7 +82,8 @@ GEM
       rainbow (>= 2.2.1)
       rake (>= 10.0)
       retriable (~> 3.0)
-    gli (2.19.2)
+    gli (2.22.2)
+      ostruct
     guard (2.16.2)
       formatador (>= 0.2.4)
       listen (>= 2.7, < 4.0)
@@ -122,6 +123,7 @@ GEM
     octokit (4.20.0)
       faraday (>= 0.9)
       sawyer (~> 0.8.0, >= 0.5.3)
+    ostruct (0.6.3)
     parallel (1.24.0)
     parser (3.3.10.1)
       ast (~> 2.4.1)
