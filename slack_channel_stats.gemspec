@@ -27,7 +27,7 @@ def production_dependency(spec)
   spec.add_dependency "tty-tree", "~> 0.3"
   spec.add_dependency "tty-which", "~> 0.4"
   spec.add_dependency "pastel", "~> 0.7.2"
-  spec.add_dependency "thor", "~> 0.20.0"
+  spec.add_dependency "thor", ">= 0.20", "< 1.6"
 end
 
 def development_dependency(spec)
