@@ -93,7 +93,7 @@ GEM
     method_source (1.0.0)
     minitest (5.14.3)
     multi_json (1.15.0)
-    multipart-post (2.1.1)
+    multipart-post (2.4.1)
     necromancer (0.5.1)
     nenv (0.3.0)
     notiffany (0.1.3)
