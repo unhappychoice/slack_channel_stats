@@ -120,7 +120,7 @@ GEM
     octokit (4.20.0)
       faraday (>= 0.9)
       sawyer (~> 0.8.0, >= 0.5.3)
-    parallel (1.20.1)
+    parallel (1.24.0)
     parser (3.3.10.1)
       ast (~> 2.4.1)
       racc
