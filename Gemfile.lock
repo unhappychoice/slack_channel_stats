@@ -289,7 +289,7 @@ GEM
       strings (~> 0.1.5)
       tty-screen (~> 0.7)
     tty-tree (0.4.0)
-    tty-which (0.4.2)
+    tty-which (0.5.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     unicode-display_width (1.8.0)
