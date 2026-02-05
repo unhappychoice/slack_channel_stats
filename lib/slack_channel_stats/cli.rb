@@ -12,7 +12,7 @@ module SlackChannelStats
         @channel_name = channel_name
         @user_name = user_name
         @latest = latest || Time.now.to_i
-        @oldest = oldest || @latest - 60 * 60 * 24 * 365
+        @oldest = oldest || (@latest - (60 * 60 * 24 * 365))
         @client = Slack::Web::Client.new
         @container = Container.new(@user_name)
       end
@@ -50,10 +50,11 @@ module SlackChannelStats
         table = TTY::Table.new([''] + (0...24).to_a, rows.reverse)
         pastel = Pastel.new
         results = table.render(:ascii, alignment: [:center], padding: [0, 1]) do |renderer|
-          renderer.filter = ->(val, row_index, col_index) do
-            next val if row_index == 0 || col_index == 0
-            val.to_i != 0 ? pastel.green(val) : pastel.bright_black(val)
-          end
+          renderer.filter = lambda { |val, row_index, col_index|
+            next val if row_index.zero? || col_index.zero?
+
+            val.to_i.zero? ? pastel.bright_black(val) : pastel.green(val)
+          }
         end
         puts results
       end
@@ -62,14 +63,14 @@ module SlackChannelStats
     desc 'generate', 'generate slack channel stats'
     def generate
       Slack.configure do |config|
-        config.token = ENV['SLACK_TOKEN']
+        config.token = ENV.fetch('SLACK_TOKEN', nil)
       end
 
       user_name = 'ULTBHGQ3W'
       channel_name = '#misc_time_ueki'
       generator = Generator.new(channel_name: channel_name, user_name: user_name)
 
-      TTY::Spinner.new("[:spinner] Downloading messages...", format: :pulse_2).run do
+      TTY::Spinner.new('[:spinner] Downloading messages...', format: :pulse_2).run do
         generator.fetch
       end
 
@@ -81,6 +82,6 @@ module SlackChannelStats
       require_relative 'version'
       puts "v#{SlackChannelStats::VERSION}"
     end
-    map %w(--version -v) => :version
+    map %w[--version -v] => :version
   end
 end

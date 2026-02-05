@@ -1,6 +1,9 @@
 AllCops:
   NewCops: enable
-  TargetRubyVersion: 2.5
+  TargetRubyVersion: 3.0
+  SuggestExtensions: false
+  Exclude:
+    - 'vendor/**/*'
 
 Style/Documentation:
   Enabled: false
@@ -11,3 +14,23 @@ Layout/LineLength:
 Metrics/BlockLength:
   Exclude:
     - 'spec/**/*'
+    - '*.gemspec'
+
+Metrics/AbcSize:
+  Max: 30
+  Exclude:
+    - '*.gemspec'
+
+Metrics/MethodLength:
+  Max: 15
+  Exclude:
+    - '*.gemspec'
+
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+Metrics/PerceivedComplexity:
+  Max: 10
+
+Naming/VariableNumber:
+  Enabled: false
