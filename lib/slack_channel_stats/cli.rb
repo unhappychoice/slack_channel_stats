@@ -7,6 +7,10 @@ require 'tty-table'
 
 module SlackChannelStats
   class CLI < Thor
+    def self.exit_on_failure?
+      true
+    end
+
     class Generator
       def initialize(channel_name:, user_name:, latest: nil, oldest: nil)
         @channel_name = channel_name
@@ -61,14 +65,14 @@ module SlackChannelStats
     end
 
     desc 'generate', 'generate slack channel stats'
+    option :channel, aliases: '-c', required: true, desc: 'Slack channel ID (e.g., C01234567)'
+    option :user, aliases: '-u', required: true, desc: 'Slack user ID (e.g., U01234567)'
     def generate
       Slack.configure do |config|
         config.token = ENV.fetch('SLACK_TOKEN', nil)
       end
 
-      user_name = 'ULTBHGQ3W'
-      channel_name = '#misc_time_ueki'
-      generator = Generator.new(channel_name:, user_name:)
+      generator = Generator.new(channel_name: options[:channel], user_name: options[:user])
 
       TTY::Spinner.new('[:spinner] Downloading messages...', format: :pulse_2).run do
         generator.fetch
