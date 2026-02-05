@@ -52,7 +52,7 @@ end
 Gem::Specification.new do |spec|
   spec.name          = 'slack_channel_stats'
   spec.version       = SlackChannelStats::VERSION
-  spec.required_ruby_version = '>= 3.0'
+  spec.required_ruby_version = '>= 3.2'
   spec.authors       = ['unhappychoice']
   spec.email         = ['unhappychoice@gmail.com']
 

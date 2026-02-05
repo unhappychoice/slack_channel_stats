@@ -68,7 +68,7 @@ module SlackChannelStats
 
       user_name = 'ULTBHGQ3W'
       channel_name = '#misc_time_ueki'
-      generator = Generator.new(channel_name: channel_name, user_name: user_name)
+      generator = Generator.new(channel_name:, user_name:)
 
       TTY::Spinner.new('[:spinner] Downloading messages...', format: :pulse_2).run do
         generator.fetch
