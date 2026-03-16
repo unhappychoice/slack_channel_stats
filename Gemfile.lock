@@ -68,6 +68,7 @@ GEM
     async-pool (0.11.2)
       async (>= 2.0)
     base64 (0.3.0)
+    benchmark (0.5.0)
     bigdecimal (4.0.1)
     codecov (0.2.12)
       json
@@ -104,12 +105,12 @@ GEM
     fiber-storage (1.0.1)
     formatador (1.2.3)
       reline
-    github_changelog_generator (1.16.4)
+    github_changelog_generator (1.17.0)
       activesupport
       async (>= 1.25.0)
       async-http-faraday
+      benchmark
       faraday-http-cache
-      multi_json
       octokit (~> 4.6)
       rainbow (>= 2.2.1)
       rake (>= 10.0)
@@ -154,7 +155,6 @@ GEM
     minitest (6.0.2)
       drb (~> 2.0)
       prism (~> 1.5)
-    multi_json (1.19.1)
     multipart-post (2.4.1)
     necromancer (0.5.1)
     nenv (0.3.0)
