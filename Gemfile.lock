@@ -45,7 +45,7 @@ GEM
     addressable (2.8.8)
       public_suffix (>= 2.0.2, < 8.0)
     ast (2.4.3)
-    async (2.39.0)
+    async (2.37.0)
       console (~> 1.29)
       fiber-annotation
       io-event (~> 1.11)
@@ -319,6 +319,7 @@ PLATFORMS
   x86_64-darwin-20
 
 DEPENDENCIES
+  async (< 2.38)
   bundler
   codecov
   github_changelog_generator
