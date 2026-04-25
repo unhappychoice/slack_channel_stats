@@ -139,7 +139,7 @@ GEM
       concurrent-ruby (~> 1.0)
     io-console (0.8.2)
     io-endpoint (0.17.2)
-    io-event (1.15.1)
+    io-event (1.14.3)
     io-stream (0.11.1)
     json (2.19.4)
     kramdown (1.16.2)
@@ -325,6 +325,7 @@ DEPENDENCIES
   guard
   guard-rspec
   guard-rubocop
+  io-event (< 1.14.4)
   rake
   rspec
   rubocop
