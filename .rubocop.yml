@@ -1,6 +1,6 @@
 AllCops:
   NewCops: enable
-  TargetRubyVersion: 3.3
+  TargetRubyVersion: 3.2
   SuggestExtensions: false
   Exclude:
     - 'vendor/**/*'
@@ -33,4 +33,7 @@ Metrics/PerceivedComplexity:
   Max: 10
 
 Naming/VariableNumber:
+  Enabled: false
+
+Gemspec/RequiredRubyVersion:
   Enabled: false
