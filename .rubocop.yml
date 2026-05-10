@@ -34,3 +34,6 @@ Metrics/PerceivedComplexity:
 
 Naming/VariableNumber:
   Enabled: false
+
+Gemspec/RequiredRubyVersion:
+  Enabled: false
