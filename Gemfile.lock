@@ -136,7 +136,7 @@ GEM
       rubocop (< 2.0)
     hashie (5.1.0)
       logger
-    i18n (1.15.1)
+    i18n (1.15.2)
       concurrent-ruby (~> 1.0)
     io-console (0.8.2)
     io-endpoint (0.17.2)
