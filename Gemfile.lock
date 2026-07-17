@@ -115,7 +115,7 @@ GEM
       rake (>= 10.0)
     gli (2.22.2)
       ostruct
-    guard (2.20.1)
+    guard (2.20.2)
       formatador (>= 0.2.4)
       listen (>= 2.7, < 4.0)
       logger (~> 1.6)
