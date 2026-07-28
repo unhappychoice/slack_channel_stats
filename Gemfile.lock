@@ -136,7 +136,7 @@ GEM
     io-console (0.8.2)
     io-endpoint (0.17.2)
     io-event (1.19.4)
-    io-stream (0.13.2)
+    io-stream (0.14.0)
       openssl (>= 3.3)
     json (2.21.1)
     kramdown (1.16.2)
