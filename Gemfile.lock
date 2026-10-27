@@ -165,7 +165,7 @@ GEM
       sawyer (~> 0.9)
     openssl (4.0.2)
     parallel (1.28.0)
-    parser (3.3.12.0)
+    parser (3.3.13.0)
       ast (~> 2.4.1)
       racc
     pastel (0.7.4)
