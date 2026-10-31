@@ -10,3 +10,8 @@ updates:
     allow:
       - dependency-type: direct
       - dependency-type: indirect
+    ignore:
+      # minitest and rubocop-ast still pin prism ~> 1.x; drop once they relax.
+      - dependency-name: prism
+        update-types:
+          - version-update:semver-major
