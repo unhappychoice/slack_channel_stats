@@ -10,3 +10,8 @@ updates:
     allow:
       - dependency-type: direct
       - dependency-type: indirect
+    ignore:
+      # prism 2.x is blocked by rubocop-ast/parser constraints and makes Dependabot fail.
+      - dependency-name: prism
+        update-types:
+          - version-update:semver-major
